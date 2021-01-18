@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
+import { Layout } from 'antd';
+import { Button } from 'antd';
+import { PoweroffOutlined } from '@ant-design/icons';
+const { Header, Footer, Sider, Content } = Layout;
 
 const App = () => {
   return (
@@ -50,7 +54,10 @@ const Ping = () => {
           <div>
               <p>{notification}</p>
 
-              <button onClick={handlePing}>Ping</button>
+              {/* <button onClick={handlePing}>Ping</button> */}
+              <Button type="primary" icon={<PoweroffOutlined />} onClick={handlePing}>
+              Ping!
+              </Button>
           </div>
       </div>
   );

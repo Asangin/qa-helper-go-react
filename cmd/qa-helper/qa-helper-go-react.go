@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	appBox, err := rice.FindBox("./build")
+	appBox, err := rice.FindBox("../../build")
 	if err != nil {
 		log.Fatal(err)
 	}
